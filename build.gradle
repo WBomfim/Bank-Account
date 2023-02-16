@@ -3,9 +3,11 @@ plugins {
     id 'eclipse'
     id 'checkstyle'
 }
+
 configurations {
   checkstyleOverride
 }
+
 repositories {
     mavenCentral()
 }
