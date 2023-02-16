@@ -13,15 +13,15 @@ public class AccountNumberFormatter {
    * @param literalAccountNumber número da conta
    */
   public String formatAccountNumber(int literalAccountNumber) {
-    byte SIZE_ACCOUNT_NUMBER = 6;
+    byte sizeAccountNumber = 6;
     String accountNumber = String.valueOf(literalAccountNumber);
   
-    if (accountNumber.length() < SIZE_ACCOUNT_NUMBER) {
-      return StringUtils.leftPad(accountNumber, SIZE_ACCOUNT_NUMBER, "0");
+    if (accountNumber.length() < sizeAccountNumber) {
+      return StringUtils.leftPad(accountNumber, sizeAccountNumber, "0");
     }
 
-    if (accountNumber.length() > SIZE_ACCOUNT_NUMBER) {
-      return StringUtils.right(accountNumber, SIZE_ACCOUNT_NUMBER);
+    if (accountNumber.length() > sizeAccountNumber) {
+      return StringUtils.right(accountNumber, sizeAccountNumber);
     }
 
     return accountNumber;
